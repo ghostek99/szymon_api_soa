@@ -10,6 +10,7 @@ defmodule SzymonApi.Repo.Migrations.CreateComputers do
       add :release_year, :integer
       add :release_month, :integer
       add :release_day, :integer
+      add :price, :float
 
       timestamps()
     end

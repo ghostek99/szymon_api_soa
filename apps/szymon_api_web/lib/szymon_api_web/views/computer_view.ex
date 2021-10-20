@@ -19,7 +19,8 @@ defmodule SzymonApiWeb.ComputerView do
       colour: computer.colour,
       release_year: computer.release_year,
       release_month: computer.release_month,
-      release_day: computer.release_day
+      release_day: computer.release_day,
+      price: computer.price
     }
   end
 end
