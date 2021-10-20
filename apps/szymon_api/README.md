@@ -1,0 +1,3 @@
+# SzymonApi
+
+**TODO: Add description**
