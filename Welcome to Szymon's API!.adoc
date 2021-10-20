@@ -52,6 +52,7 @@ Usage
   - Release day (as 01 - 30)
   - Release month (as 01 - 12)
   - Release year (as 0000 - 9999)
+  - Price (2 float numbers)
 
 Reference
 ^^^^^^^^^^
@@ -102,7 +103,8 @@ DELETE localhost:4000/computers/{id}
         "model": "Example_model",
         "release_day": 01,
         "release_month": 01,
-        "release_year": 2021
+        "release_year": 2021,
+        "price: 5000.82
     }
 }
 -----------------
