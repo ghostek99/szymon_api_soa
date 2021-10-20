@@ -1,0 +1,124 @@
+Welcome to Szymon's API!
+-------------------------
+
+This document contains the API reference for computers. This has been created as a task for 
+
+*Service Oriented Architecture.*
+
+What's this API?
+~~~~~~~~~~~~~~~~~
+
+This API is made simply to **C**reate, **R**ead, **U**pdate, and **D**elete (CRUD) computers.
+It is a RESTful service, all data is POSTed and received as JSON.
+
+Prerequisites
+~~~~~~~~~~~~~~
+
+To clone the repository:
+
+-----------------
+git clone https://github.com/ghostek99/szymon_api_soa.git
+-----------------
+ * You need:
+  - Elixir v1.12.3
+
+  - Erlang/OTP 24
+
+  - Phoenix framework v1.6.2
+
+  - Postgres
+    + edit credentials in config/dev.exs
+
+If you have all the prerequisites:
+
+-----------------
+mix deps.get && mix phx.server
+-----------------
+
+There are prepared seeds to fill in the database. You can run them by executing:
+
+-----------------
+mix apps/szymon_api/priv/repo/seeds.exs
+-----------------
+
+Usage
+~~~~~~
+
+* Every computer consists of the following variables:
+  - Brand
+  - Colour
+  - Disk size (in GB)
+  - Model
+  - Release day (as 01 - 30)
+  - Release month (as 01 - 12)
+  - Release year (as 0000 - 9999)
+
+Reference
+^^^^^^^^^^
+
+* **C**reate:
++
+[source,html]
+-----------------
+POST localhost:4000/computers
+-----------------
+
+* **R**ead:
++
+[source,html]
+-----------------
+GET localhost:4000/computers
+-----------------
+
+* **R**ead one:
++
+[source,html]
+-----------------
+GET localhost:4000/computers/{id}
+-----------------
+
+* **U**pdate:
++
+[source,html]
+-----------------
+PUT localhost:4000/computers/{id}
+-----------------
+
+* **D**elete:
++
+[source,html]
+-----------------
+DELETE localhost:4000/computers/{id}
+-----------------
+
+* The json template for adding a computer:
++
+-----------------
+{
+    "computer": {
+        "brand": "Example_brand",
+        "colour": "Example_colour",
+        "disk_size": 100,
+        "model": "Example_model",
+        "release_day": 01,
+        "release_month": 01,
+        "release_year": 2021
+    }
+}
+-----------------
+
+* The json template for updating a computer:
++
+-----------------
+{
+    "computer": {
+        "id": 1,
+        "variable": "value",
+        ...
+    }
+}
+-----------------
+
+To use this api you can use cURL, Postman, .. or any other API platform.
+
+@ Szymon Nidecki
